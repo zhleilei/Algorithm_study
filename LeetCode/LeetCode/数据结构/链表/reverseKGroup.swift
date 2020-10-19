@@ -47,7 +47,8 @@
  *     public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
  * }
  */
-class Solution_reverseKGroup {
+extension Solution {
+//class Solution_reverseKGroup {
     func reverseKGroup(_ head: ListNode?, _ k: Int) -> ListNode? {
         return nil
     }

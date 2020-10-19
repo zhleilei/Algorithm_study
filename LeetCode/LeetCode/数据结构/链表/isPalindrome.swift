@@ -39,7 +39,8 @@
  *     }
  * }
  */
-class Solution_isPalindrome {
+extension Solution {
+//class Solution_isPalindrome {
     func isPalindrome(_ head: ListNode?) -> Bool {
         return true
     }

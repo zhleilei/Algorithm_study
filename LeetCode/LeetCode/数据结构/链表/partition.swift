@@ -24,8 +24,8 @@
  
  类似: https://leetcode-cn.com/problems/partition-list-lcci/
  */
-
-class Solution_partition {
+extension Solution {
+//class Solution_partition {
     func partition(_ head: ListNode?, _ x: Int) -> ListNode? {
         return nil
     }

@@ -40,8 +40,8 @@
  链接：https://leetcode-cn.com/problems/delete-node-in-a-linked-list
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-
-class Solution_deleteNode {
+extension Solution {
+//class Solution_deleteNode {
     func deleteNode(_ node: ListNode?) {
         
     }

@@ -30,8 +30,8 @@
  链接：https://leetcode-cn.com/problems/maximum-gap
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-
-class Solution_maximumGap {
+extension Solution {
+//class Solution_maximumGap {
     func maximumGap(_ nums: [Int]) -> Int {
         return 0
     }

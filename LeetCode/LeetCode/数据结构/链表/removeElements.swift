@@ -14,8 +14,8 @@
  输入: 1->2->6->3->4->5->6, val = 6
  输出: 1->2->3->4->5
  */
-
-class Solution_removeElements {
+extension Solution {
+//class Solution_removeElements {
     func removeElements(_ head: ListNode?, _ val: Int) -> ListNode? {
         return nil
     }

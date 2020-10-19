@@ -30,8 +30,8 @@
  链接：https://leetcode-cn.com/problems/longest-substring-without-repeating-characters
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-
-class Solution_lengthOfLongestSubstring {
+extension Solution {
+//class Solution_lengthOfLongestSubstring {
     func lengthOfLongestSubstring(_ s: String) -> Int {
         return 0
     }

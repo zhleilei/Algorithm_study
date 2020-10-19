@@ -57,8 +57,8 @@
  
  类似: https://leetcode-cn.com/problems/fan-zhuan-dan-ci-shun-xu-lcof/
  */
-
-class Solution_reverseWords {
+extension Solution {
+//class Solution_reverseWords {
     func reverseWords(_ s: String) -> String {
         return ""
     }

@@ -31,8 +31,8 @@
  链接：https://leetcode-cn.com/problems/squares-of-a-sorted-array
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-
-class Solution_sortedSquares {
+extension Solution {
+//class Solution_sortedSquares {
     func sortedSquares(_ A: [Int]) -> [Int] {
         return []
     }

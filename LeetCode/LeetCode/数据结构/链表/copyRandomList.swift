@@ -30,8 +30,8 @@
  *     }
  * }
  */
-
-class Solution_copyRandomList {
+extension Solution {
+//class Solution_copyRandomList {
     func copyRandomList(_ head: ListNode?) -> ListNode? {
         return nil
     }

@@ -21,8 +21,8 @@
  
  https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/
  */
-
-class Solution_getIntersectionNode {
+extension Solution {
+//class Solution_getIntersectionNode {
     func getIntersectionNode(_ headA: ListNode?, _ headB: ListNode?) -> ListNode? {
         return nil
     }

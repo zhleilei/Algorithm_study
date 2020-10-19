@@ -30,8 +30,8 @@
  输出：true
  解释：链表中有一个环，其尾部连接到第二个节点。
  */
-
-class Solution_hasCycle {
+extension Solution {
+//class Solution_hasCycle {
     func hasCycle(_ head: ListNode?) -> Bool {
         return false
     }

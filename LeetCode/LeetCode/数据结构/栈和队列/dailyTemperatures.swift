@@ -18,8 +18,8 @@
  
  
  */
-
-class Solution_dailyTemperatures {
+extension Solution {
+//class Solution_dailyTemperatures {
     func dailyTemperatures(_ T: [Int]) -> [Int] {
         return []
     }

@@ -19,8 +19,8 @@
  链接：https://leetcode-cn.com/problems/valid-parentheses
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-
-class Solution_isValid {
+extension Solution {
+//class Solution_isValid {
     func isValid(_ s: String) -> Bool {
         return false
     }

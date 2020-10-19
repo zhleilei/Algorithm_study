@@ -47,8 +47,8 @@
  
  类似: https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/
  */
-
-class Solution_maxSlidingWindow {
+extension Solution {
+//class Solution_maxSlidingWindow {
     func maxSlidingWindow(_ nums: [Int], _ k: Int) -> [Int] {
         return []
     }

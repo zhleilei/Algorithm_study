@@ -35,8 +35,8 @@
  链接：https://leetcode-cn.com/problems/fibonacci-number
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-
-class Solution_fib {
+extension Solution {
+//class Solution_fib {
     func fib(_ N: Int) -> Int {
         return 0
     }

@@ -32,8 +32,8 @@
  https://leetcode-cn.com/problems/group-anagrams-lcci/
  https://leetcode-cn.com/problems/group-anagrams-lcci/
  */
-
-class Solution_isAnagram {
+extension Solution {
+//class Solution_isAnagram {
     func isAnagram(_ s: String, _ t: String) -> Bool {
 return true
     }
