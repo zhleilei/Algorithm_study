@@ -60,8 +60,8 @@
  * }
  */
 
-extension Solution {
+class Solution_isSubtree {
     func isSubtree(_ s: TreeNode?, _ t: TreeNode?) -> Bool {
-        
+        return true
     }
 }

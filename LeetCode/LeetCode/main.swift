@@ -30,10 +30,6 @@ public class TreeNode {
 }
 
 
-class Solution {
-    
-}
-
 print("Hello, World!")
 
 

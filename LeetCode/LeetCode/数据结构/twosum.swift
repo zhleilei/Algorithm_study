@@ -25,7 +25,7 @@
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 
-extension Solution {
+class Solution_twosum {
     func twoSum1(_ nums: [Int], _ target: Int) -> [Int] {
         // 双层遍历
         for (i, num) in nums.enumerated() {
@@ -55,6 +55,6 @@ extension Solution {
 
 func twosum() {
     let nums = [2, 7, 11, 15], target = 18
-    let _ = Solution.init().twoSum(nums, target)
+    let _ = Solution_twosum.init().twoSum(nums, target)
 }
 

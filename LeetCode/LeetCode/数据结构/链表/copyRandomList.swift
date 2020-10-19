@@ -31,8 +31,8 @@
  * }
  */
 
-extension Solution {
-    func copyRandomList(_ head: Node?) -> Node? {
-        
+class Solution_copyRandomList {
+    func copyRandomList(_ head: ListNode?) -> ListNode? {
+        return nil
     }
 }

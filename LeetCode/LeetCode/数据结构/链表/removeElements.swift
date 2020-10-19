@@ -15,8 +15,8 @@
  输出: 1->2->3->4->5
  */
 
-extension Solution {
+class Solution_removeElements {
     func removeElements(_ head: ListNode?, _ val: Int) -> ListNode? {
-
+        return nil
     }
 }

@@ -52,8 +52,8 @@
  *     }
  * }
  */
-class Solution {
+class Solution_constructMaximumBinaryTree {
     func constructMaximumBinaryTree(_ nums: [Int]) -> TreeNode? {
-        
+        return nil
     }
 }
