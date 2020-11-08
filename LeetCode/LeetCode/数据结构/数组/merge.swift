@@ -38,9 +38,25 @@
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 
+// 思路: 比较的最大的值放在最后面.这里遍历的是合并数组nums2
 extension Solution {
 //class Solution_merge {
     func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
+        var currentIndex = m + n - 1
+        var i = m - 1
+        var j = n - 1
+        // 执行一次循环
+        while j >= 0 {
+            if i >= 0 && nums1[i] > nums2[j] {
+                nums1[currentIndex] = nums1[i]
+                currentIndex = currentIndex - 1
+                i = i - 1 // 当前值使用后 i-1
+            }else {
+                nums1[currentIndex] = nums2[j]
+                currentIndex = currentIndex - 1
+                j = j - 1 // 当前值使用后 j-1
+            }
+        }
         
     }
 }

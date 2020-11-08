@@ -21,9 +21,33 @@
  链接：https://leetcode-cn.com/problems/sub-sort-lcci
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
+// 使用双指针法 从左到右, 从右到左分别遍历找出各自不满足条件的right 和 left
 extension Solution {
 //class Solution_subSort {
     func subSort(_ array: [Int]) -> [Int] {
-return []
+        if array.count == 0 {
+            return [-1, -1]
+        }
+        var max = array[0]
+        var right = -1
+        var left = -1
+        
+        for i in 1 ..< array.count {
+            if array[i] > max {
+                max = array[i]
+            }else {
+                right = i
+            }
+        }
+        
+        var min = array[array.count - 1]
+        for i in (0 ..< array.count - 1).reversed()  {
+            if array[i] < min {
+                min = array[i]
+            }else {
+                left = i
+            }
+        }
+        return [left, right]
     }
 }
