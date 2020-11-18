@@ -60,6 +60,17 @@
 extension Solution {
 //class Solution_reverseWords {
     func reverseWords(_ s: String) -> String {
-        return ""
+                let list = s.split(separator: " ")
+//                print(list)
+                let rlist = list.reversed()
+//                print(rlist)
+                return rlist.joined(separator: " ")
     }
+}
+
+func reverseWords() {
+    let str = "Alice does not even like bob"
+    let reStr = Solution.init().reverseWords(str)
+    print(reStr)
+    
 }
