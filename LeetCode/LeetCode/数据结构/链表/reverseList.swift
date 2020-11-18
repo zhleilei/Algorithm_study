@@ -23,6 +23,18 @@
 extension Solution {
 //class Solution_reverseList {
     func reverseList(_ head: ListNode?) -> ListNode? {
-        return nil
+        if head == nil || head?.next == nil {
+            return nil
+        }
+        
+        var p = head
+        var newHead: ListNode? = nil
+        while p != nil {
+            let temp = p?.next
+            p?.next = newHead
+            newHead = p
+            p = temp
+        }
+        return newHead
     }
 }

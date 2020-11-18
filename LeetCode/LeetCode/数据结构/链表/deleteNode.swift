@@ -39,10 +39,13 @@
  来源：力扣（LeetCode）
  链接：https://leetcode-cn.com/problems/delete-node-in-a-linked-list
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ 
+ 拿到要删除的节点,将当前节点完整替换为下一个节点
  */
 extension Solution {
 //class Solution_deleteNode {
     func deleteNode(_ node: ListNode?) {
-        
+        node?.val = (node?.next?.val)!
+        node?.next = node?.next?.next
     }
 }
