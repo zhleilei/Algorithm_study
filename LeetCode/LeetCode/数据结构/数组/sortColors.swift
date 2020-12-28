@@ -27,10 +27,42 @@
  来源：力扣（LeetCode）
  链接：https://leetcode-cn.com/problems/sort-colors
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ 
+ 思路:
+ 使用三指针
+ 左指针A
+ 右指针B
+ 中间指针C
+ 
+判断C
+ 遇到1,C++
+ 遇到0,LC交换, C++, L++
+ 遇到2,RC交换, C++, R-- 在此判断C情况
  */
 extension Solution {
 //class Solution_sortColors {
     func sortColors(_ nums: inout [Int]) {
-        
+        var cur = 0
+        var left = 0
+        var right = nums.count - 1
+        while cur <= right {
+            let value = nums[cur]
+            if value == 0 {
+                swap(&nums, i: left, j: cur)
+                left += 1
+                cur += 1
+            }else if value == 1 {
+                cur += 1
+            }else {
+                swap(&nums, i: cur, j: right)
+                right -= 1
+            }
+        }
+    }
+    
+    func swap(_ num: inout [Int], i: Int, j: Int) {
+        let temp = num[i]
+        num[i] = num[j]
+        num[j] = temp
     }
 }

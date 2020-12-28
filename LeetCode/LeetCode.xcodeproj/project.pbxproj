@@ -241,10 +241,10 @@
 		9A69FCAD253A9F3400B285A6 /* 链表 */ = {
 			isa = PBXGroup;
 			children = (
+				9A69FCD5253B1D0B00B285A6 /* removeElements.swift */,
 				9A69FCB9253B11B400B285A6 /* deleteNode.swift */,
 				9A69FCBB253B126300B285A6 /* reverseList.swift */,
 				9A69FCBD253B12BA00B285A6 /* hasCycle.swift */,
-				9A69FCD5253B1D0B00B285A6 /* removeElements.swift */,
 				9A69FCD7253B1D4C00B285A6 /* addTwoNumbers.swift */,
 				9A69FCD9253B1D8400B285A6 /* getIntersectionNode.swift */,
 				9A69FCDB253B1DF500B285A6 /* partition.swift */,

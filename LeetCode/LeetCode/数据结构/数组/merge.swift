@@ -39,6 +39,7 @@
  */
 
 // 思路: 比较的最大的值放在最后面.这里遍历的是合并数组nums2
+// 使用三指针, 比较两个数组比较大的放在最后面
 extension Solution {
 //class Solution_merge {
     func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {

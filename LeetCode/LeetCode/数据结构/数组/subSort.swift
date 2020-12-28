@@ -20,6 +20,10 @@
  来源：力扣（LeetCode）
  链接：https://leetcode-cn.com/problems/sub-sort-lcci
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ 
+ 思路:
+ 单侧举例, 从左到右, 扫过记录最大值Max, 继续扫描发现逆序的记录逆序数的位置i, 发现比max 大就更新max, 继续扫描, 扫描完毕后i就是最右测的边界
+ 从右到左, 也是相同思路
  */
 // 使用双指针法 从左到右, 从右到左分别遍历找出各自不满足条件的right 和 left
 extension Solution {
@@ -33,7 +37,7 @@ extension Solution {
         var left = -1
         
         for i in 1 ..< array.count {
-            if array[i] > max {
+            if array[i] >= max {
                 max = array[i]
             }else {
                 right = i
@@ -41,8 +45,9 @@ extension Solution {
         }
         
         var min = array[array.count - 1]
-        for i in (0 ..< array.count - 1).reversed()  {
-            if array[i] < min {
+        for i in (0 ..< array.count - 1).reversed()  { // 耗时较大
+//        for i in stride(from: array.count - 1, to: 0, by: -1) {
+            if array[i] <= min {
                 min = array[i]
             }else {
                 left = i
