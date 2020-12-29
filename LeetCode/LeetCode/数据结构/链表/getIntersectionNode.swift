@@ -7,6 +7,7 @@
 //
 
 /*
+ 160:
  编写一个程序，找到两个单链表相交的起始节点。
  输入：intersectVal = 8, listA = [4,1,8,4,5], listB = [5,0,1,8,4,5], skipA = 2, skipB = 3
  输出：Reference of the node with value = 8
@@ -16,6 +17,8 @@
  链接：https://leetcode-cn.com/problems/intersection-of-two-linked-lists
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  
+ 思路: 通过两个链表头尾相接, 同时扫描两个链表, 如果有最后相等的值,那么这个就是交点
+ 
  类似题目:
  https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/
  
@@ -24,6 +27,28 @@
 extension Solution {
 //class Solution_getIntersectionNode {
     func getIntersectionNode(_ headA: ListNode?, _ headB: ListNode?) -> ListNode? {
-        return nil
+        if headA == nil || headB == nil {
+            return nil
+        }
+        var curA = headA
+        var curB = headB
+        
+        while curA !== curB {
+            curA = (curA == nil) ? headB : curA?.next
+            curB = (curB == nil) ? headA : curB?.next
+        }
+        return curA
     }
 }
+
+//extension ListNode: Hashable, Equatable {
+//    public func hash(into hasher: inout Hasher) {
+//        // 用于唯一标识
+//        hasher.combine(val)
+//        hasher.combine(ObjectIdentifier(self))
+//    }
+//
+//    public static func ==(lhs: ListNode, rhs: ListNode) -> Bool {
+//        return lhs === rhs
+//    }
+// }
