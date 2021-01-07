@@ -52,11 +52,53 @@
  记录最值
  往后移动继续重复上述过程
  
+ 1.nums[i] >= 队尾 删除队尾, 直到队尾 > nums[i]
+ 2.将i加入队尾
+ 3.w >= 0
+    队列头部如果失效就移除对头 (< w失效)
+    设置w窗口的最大值为对头
+ 
+ 
  类似: https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/
  */
 extension Solution {
 //class Solution_maxSlidingWindow {
     func maxSlidingWindow(_ nums: [Int], _ k: Int) -> [Int] {
-        return []
+        if nums.count == 0  || k < 1 {
+            return []
+        }
+        if  k == 1 {
+            return nums
+        }
+        var rs: [Int] = [Int]()
+        var queue: [Int] = [Int]()
+        
+        for (index, _) in nums.enumerated() {
+            // 1.nums[i] >= 队尾 删除队尾, 直到队尾 > nums[i]
+            while queue.count > 0 && nums[index] >= nums[queue.last!] {
+                queue.removeLast()
+            }
+            // 2.将i加入队尾
+            queue.append(index)
+            // 3.检验w有效性
+            let w = index - (k - 1)
+            if w < 0 {
+                continue
+            }
+            //  队列头部如果失效就移除对头 (< w失效)
+            if queue.first! < w {
+                queue.removeFirst()
+            }
+            //  设置w窗口的最大值为对头
+            rs.append(nums[queue.first!])
+        }
+        
+        return rs
     }
+}
+
+func Solution_maxSlidingWindow() {
+    let nums = [1,3,-1,-3,5,3,6,7], k = 3
+    let rs = Solution.init().maxSlidingWindow(nums, k)
+    print(rs)
 }
