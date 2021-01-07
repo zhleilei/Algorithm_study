@@ -45,6 +45,13 @@
  链接：https://leetcode-cn.com/problems/sliding-window-maximum
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  
+ 思路: 使用双端队列(使用数组模拟)
+ 队列存放的是索引
+ 队列中的元素从头到尾是逐渐减小的 (添加元素的时候判断大小)
+ 检查是否有效无效的话也要从队列中移除掉
+ 记录最值
+ 往后移动继续重复上述过程
+ 
  类似: https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/
  */
 extension Solution {

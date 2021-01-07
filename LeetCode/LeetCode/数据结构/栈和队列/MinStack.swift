@@ -42,33 +42,46 @@
  来源：力扣（LeetCode）
  链接：https://leetcode-cn.com/problems/min-stack
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ 思路: 通过链表的方式, 在链表中保存两个值 当前值和当前最小值.注意push的时候比较当前值和最小值.
  
  类似: https://leetcode-cn.com/problems/min-stack-lcci/
  */
+class Node {
+    var val: Int? = 0
+    var min: Int? = 0
+    var next: Node?
+    init(val: Int, min: Int, next: Node?) {
+        self.val = val
+        self.min = min
+        self.next = next
+    }
+}
 
-//class MinStack {
-//
-//    /** initialize your data structure here. */
-//    init() {
-//
-//    }
-//
-//    func push(_ x: Int) {
-//
-//    }
-//
-//    func pop() {
-//
-//    }
-//
-//    func top() -> Int {
-//
-//    }
-//
-//    func getMin() -> Int {
-//
-//    }
-//}
+class MinStack {
+
+    /** initialize your data structure here. */
+    var head: Node? = Node(val: 0, min: Int.max, next: nil) // 注意min: Int.max
+    
+    init() {
+
+    }
+
+    func push(_ x: Int) {
+        head = Node(val: x, min: min(x, (head?.min)!), next: head)
+    }
+
+    func pop() {
+        head = head?.next
+    }
+
+    func top() -> Int {
+        return (head?.val)!
+     }
+
+    func getMin() -> Int {
+        return (head?.min)!
+    }
+}
 
 /**
  * Your MinStack object will be instantiated and called as such:
