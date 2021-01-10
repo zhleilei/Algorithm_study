@@ -55,16 +55,70 @@
     链接：https://leetcode-cn.com/problems/reverse-words-in-a-string
     著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  
+ 思路:
+    方法一:使用swift的API
+    方法二:1.消除空格 2.全部逆序 3.对每个单词逆序
  类似: https://leetcode-cn.com/problems/fan-zhuan-dan-ci-shun-xu-lcof/
  */
 extension Solution {
 //class Solution_reverseWords {
-    func reverseWords(_ s: String) -> String {
+    func reverseWords_api(_ s: String) -> String {
                 let list = s.split(separator: " ")
-//                print(list)
                 let rlist = list.reversed()
-//                print(rlist)
                 return rlist.joined(separator: " ")
+    }
+    // 字符串转数组?
+    func reverseWords(_ s: String) -> String {
+        // 消除空格 通过双指针移动的方式
+        // 字符串的有效长度
+        var space = true
+        var charStr = [Character]()
+        for ch in s {
+            if ch != " " {
+                charStr += "\(ch)"
+                space = false
+            }else if space == false {
+                charStr += " "
+                space = true
+            }
+        }
+        if space == true {
+            // 删除最后一个 sapce
+            charStr.removeLast()
+        }
+        // 翻转全部字符
+        let len = charStr.count
+        reverseString(&charStr, 0, len)
+        
+        // 翻转以space为间隔的,除最后一个之外的字符串
+        var preIndex = -1
+        for i in 0 ..< len {
+            if charStr[i] == " "{
+                reverseString(&charStr, preIndex + 1, i)
+                preIndex = i
+            }
+        }
+        // 翻转最后一个单词
+        reverseString(&charStr, preIndex + 1, len)
+        
+        // 拼接成字符串
+        var str = ""
+        for ch in charStr {
+            str += "\(ch)"
+        }
+        return str
+    }
+    
+    func reverseString(_ chars: inout [Character], _ l: Int, _ r: Int) {
+            var m = l
+            var n = r - 1
+        while m < n {
+            let x = chars[m]
+            chars[m] = chars[n]
+            chars[n] = x
+            m += 1
+            n -= 1
+        }
     }
 }
 
