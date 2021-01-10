@@ -16,11 +16,41 @@
  
  https://leetcode-cn.com/problems/daily-temperatures/
  
+ 思路: 利用栈(这里使用数组), 求得右边第一个比他大的索引与当前索引的差值.
  
  */
 extension Solution {
 //class Solution_dailyTemperatures {
     func dailyTemperatures(_ T: [Int]) -> [Int] {
-        return []
+        if T.count == 0 {
+            return []
+        }
+        var rs: [Int] = Array(repeating: 0, count: T.count)
+        var stact: [Int] = [Int]()
+        for index in 0 ..< T.count {
+            #warning("zll test")
+            while stact.count > 0 && T[index] > T[stact.last!] {
+                let topIdx = stact.last
+                rs[topIdx!] = index - topIdx!
+                stact.removeLast()
+                print("\(topIdx!)--\(rs[topIdx!])")
+            }
+            stact.append(index)
+        }
+        print(rs)
+        return rs
     }
+    #warning("zll  fix")
+    // 倒推法
+    
+    // 倒推法精简版
+    
+    
+    
+    
+}
+
+func dailyTemperatures() {
+    let temperatures = [73, 74, 75, 71, 69, 72, 76, 73]
+    let _ = Solution.init().dailyTemperatures(temperatures)
 }

@@ -27,10 +27,26 @@
  来源：力扣（LeetCode）
  链接：https://leetcode-cn.com/problems/string-rotation-lcci
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ 
+ 思路: (s1 + s1).contains(s2)
  */
 extension Solution {
-//class Solution_isFlipedString {
+    //class Solution_isFlipedString {
     func isFlipedString(_ s1: String, _ s2: String) -> Bool {
-return true
+        if s1.count == 0 && s2.count == 0 {
+            return true
+        }
+        
+        if s1.count != s2.count {
+            return false
+        }
+        
+        let str = s1 + s1
+        if str.contains(s2) {
+            return true
+        }
+        
+        return false
     }
 }
+
