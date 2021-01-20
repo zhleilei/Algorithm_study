@@ -28,7 +28,11 @@
  来源：力扣（LeetCode）
  链接：https://leetcode-cn.com/problems/invert-binary-tree
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ 
+ 1. 一般通过递归和遍历解决
+ 2. Morris遍历 实现时间O(n) 空间复杂度O(1)
  */
+#warning("zll 翻转二叉树")
 extension Solution {
 //class Solution_invertTree {
     func invertTree(_ root: TreeNode?) -> TreeNode? {

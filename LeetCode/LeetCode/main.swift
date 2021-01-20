@@ -45,3 +45,5 @@ reverseWords()
 Solution_maxSlidingWindow()
 
 dailyTemperatures();
+
+maxValue()

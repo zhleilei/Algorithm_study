@@ -18,6 +18,12 @@
  来源：力扣（LeetCode）
  链接：https://leetcode-cn.com/problems/longest-palindromic-substring
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ 思路:
+1. 动态规划:
+ <=2时: dp[i][j] = s[i] = s[j],
+ > 2时: dp[i][j] = dp[i+1][j-1] && s[i] == s[j]
+2. 中心扩展方式(以字符和间隙作为扩展中心), (优化可以将连续的相同字符作为一个扩展中心)
+3. Manacher (??)
  */
 extension Solution {
 //class Solution_longestPalindrome {
@@ -29,3 +35,5 @@ extension Solution {
 func longestPalindrome() {
     let _ =  Solution.init().longestPalindrome("xxx")
 }
+
+#warning("zll 动态规划 + 中心扩展方式 Manacher")

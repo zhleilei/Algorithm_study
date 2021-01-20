@@ -29,10 +29,17 @@
  来源：力扣（LeetCode）
  链接：https://leetcode-cn.com/problems/longest-substring-without-repeating-characters
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ 
+ 思路: 画图
+    分三种情况  0.....pi..li..i-1 i...  比较pi(i上一次出现的位置)和li(i-1的最长不重复子串)
  */
+#warning("zll fix")
 extension Solution {
 //class Solution_lengthOfLongestSubstring {
     func lengthOfLongestSubstring(_ s: String) -> Int {
+        if s.count == 0 {
+            return 0
+        }
         return 0
     }
 }
