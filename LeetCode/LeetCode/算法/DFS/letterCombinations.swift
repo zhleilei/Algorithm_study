@@ -52,18 +52,18 @@ class Solution1 {
     }
     
     func dfs(_ index: Int, _ chars: [Character], _ outputs: inout [Character], _ resluts: inout [String]) {
-        
         if index == chars.count {// 最后一层
             resluts.append(String(outputs))
-        }else {// 枚举当前层的所有选择
+        }else {
             let letters = lettersArray[chars[index].hexDigitValue! - 2]
+            // 枚举当前层的所有选择
             for letter in letters {
                 outputs.append(letter)
+                // 进入下一层
                 dfs(index + 1, chars, &outputs, &resluts)
                 outputs.removeLast()
             }
         }
     }
-    
 }
 

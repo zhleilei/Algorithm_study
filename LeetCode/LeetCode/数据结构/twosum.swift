@@ -23,6 +23,11 @@
  来源：力扣（LeetCode）
  链接：https://leetcode-cn.com/problems/two-sum
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ 
+ 思路:
+    暴力法  双层遍历
+    通过哈希表 通过空间换时间
+    
  */
 extension Solution {
 //class Solution_twosum {
@@ -40,11 +45,12 @@ extension Solution {
     }
     // 遍历哈希表
     func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+        // 用来存储扫描过的元素
         var dict = [Int:Int]()
         for (index, n) in nums.enumerated() {
             let complement = target - n
             if dict.keys.contains(complement) && index != dict[complement] {
-                print([dict[complement]!, index])
+//                print([dict[complement]!, index])
                 return [dict[complement]!, index]
             }
             dict[n] = index
