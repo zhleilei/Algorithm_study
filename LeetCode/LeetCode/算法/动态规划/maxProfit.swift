@@ -35,7 +35,7 @@
  i天卖出(比较当前天卖出的最大利润和总的最大利润)
  */
 extension Solution {
-    func maxProfit(_ prices: [Int]) -> Int {
+    func maxProfit1(_ prices: [Int]) -> Int {
         if prices.count == 0 {
             return 0
         }
@@ -51,5 +51,9 @@ extension Solution {
         }
         return maxProfit
     }
+    #warning("zll 最大连续子序列和")
+    // 动态规划方式, 找出最大连续子序列和
+    func maxProfit(_ prices: [Int]) -> Int {
+        return 0
+    }
 }
-#warning("zll 动态规划方式")

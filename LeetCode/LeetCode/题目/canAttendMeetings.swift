@@ -11,6 +11,7 @@
 extension Solution {
     func canAttendMeetings(_ intervals: [[Int]]) -> Bool{
 //        let inter =
+        return true
     }
 }
 
@@ -22,6 +23,6 @@ extension Solution {
 
 extension Solution {
     func canAttendMeetings2(_ intervals: [[Int]]) -> Bool{
-        
+        return true
     }
 }

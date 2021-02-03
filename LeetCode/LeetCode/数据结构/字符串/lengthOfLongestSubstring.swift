@@ -37,9 +37,32 @@
 extension Solution {
 //class Solution_lengthOfLongestSubstring {
     func lengthOfLongestSubstring(_ s: String) -> Int {
-        if s.count == 0 {
+        guard s.count > 0 else {
             return 0
         }
-        return 0
+        let charsValArr = s.unicodeScalars.map { Int($0.value) }
+        var preIndexArr = Array(repeating: -1, count: 128)
+        // i-1 位置字符结尾的最长不重复字符串开始索引
+        var left = -1
+        var maxCount = 1
+        // 方式一
+//        for i in 0..<charsValArr.count {
+//            left = max(left, preIndexArr[charsValArr[i]])
+//            preIndexArr[charsValArr[i]] = i
+//            maxCount = max(maxCount, i - left)
+//        }
+        // 方式二
+        for i in 0..<charsValArr.count {
+            // 当前字符上一次出现的位置
+            let pi = preIndexArr[charsValArr[i]]
+            if left <= pi {
+                left = pi + 1
+            }
+            // 存储当前字符出现的位置
+            preIndexArr[charsValArr[i]] = i
+            maxCount = max(maxCount, i - left + 1)
+        }
+        
+        return maxCount
     }
 }

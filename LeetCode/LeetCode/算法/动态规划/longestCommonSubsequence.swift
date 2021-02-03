@@ -42,10 +42,38 @@
  来源：力扣（LeetCode）
  链接：https://leetcode-cn.com/problems/longest-common-subsequence
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ 
+ LCS
+ 思路:
+    
  */
 
 class Solution_longestCommonSubsequence {
     func longestCommonSubsequence(_ text1: String, _ text2: String) -> Int {
-        return 0
+        guard text1.count > 0 else {
+            return 0
+        }
+        guard text2.count > 0 else {
+            return 0
+        }
+        let text1A = Array(text1)
+        let text2A = Array(text2)
+        var dp = Array(repeating: Array(repeating: 0, count: text2.count + 1), count: text1.count + 1)
+        for i in 1...text1A.count {
+            for j in 1...text2A.count {
+                if text1A[i - 1] == text2A[j - 1] {
+                    dp[i][j] = dp[i - 1][j - 1] + 1
+                }else {
+                    dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+                }
+            }
+        }
+        return dp[text1.count][text2.count]
     }
+}
+
+func longestCommonSubsequence() {
+    let a = Solution_longestCommonSubsequence.init().longestCommonSubsequence("abcde", "ace")
+    
+    print(a)
 }

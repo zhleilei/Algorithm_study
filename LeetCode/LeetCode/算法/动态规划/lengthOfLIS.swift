@@ -24,9 +24,29 @@
  来源：力扣（LeetCode）
  链接：https://leetcode-cn.com/problems/longest-increasing-subsequence
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ 
+ LIS
+ 思路:
+ 
  */
 class Solution_lengthOfLIS {
     func lengthOfLIS(_ nums: [Int]) -> Int {
-        return 0
+        guard nums.count > 0 else {
+            return 0
+        }
+        var dp = Array(repeating: 1, count: nums.count)
+        dp[0] = 1
+        var maxVal = dp[0]
+        for i in 1..<nums.count {
+            dp[i] = 1
+            for j in 0..<i {
+                if nums[i] <= nums[j] {
+                    continue
+                }
+                dp[i] = max(dp[i], dp[j] + 1)
+            }
+            maxVal = max(dp[i], maxVal)
+        }
+        return maxVal
     }
 }

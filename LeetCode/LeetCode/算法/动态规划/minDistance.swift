@@ -44,10 +44,47 @@
  来源：力扣（LeetCode）
  链接：https://leetcode-cn.com/problems/edit-distance
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ 思路:
+    考虑四种情况
+    最后一种操作是删除操作, 插入操作, 替换操作
+    s1[i- 1] = s2[j - 1] 不做任何操作
  */
 
 extension Solution {
     func minDistance(_ word1: String, _ word2: String) -> Int {
-        return 0
+        if word1.count == 0 || word2.count == 0 {
+            return word1.count + word2.count
+        }
+        let arr1 = Array(word1)
+        let arr2 = Array(word2)
+        
+        let row = arr1.count + 1
+        let col = arr2.count + 1
+        
+        var dp = Array(repeating: Array(repeating: 0, count: col), count: row)
+        
+        dp[0][0] = 0
+        
+        for i in 1 ..< row {
+            dp[i][0] = i
+        }
+        
+        for j in 1 ..< col {
+            dp[0][j] = j
+        }
+        
+        for i in 1 ..< row {
+            for j in 1 ..< col {
+                let top = dp[i - 1][j] + 1
+                let left = dp[i][j - 1] + 1
+                var leftTop = dp[i - 1][j - 1]
+                if arr1[i - 1] != arr2[j - 1] {
+                    leftTop += 1
+                }
+                dp[i][j] = min(top, left, leftTop)
+            }
+        }
+        
+        return dp[arr1.count][arr2.count]
     }
 }
