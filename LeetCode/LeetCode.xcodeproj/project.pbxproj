@@ -55,6 +55,7 @@
 		9A88EB6C25AF4085001DF195 /* lowestCommonAncestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A88EB6B25AF4085001DF195 /* lowestCommonAncestor.swift */; };
 		9A894EBB25B2DC7F0062E337 /* letterCombinations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A894EBA25B2DC7F0062E337 /* letterCombinations.swift */; };
 		9A894EBD25B321370062E337 /* permute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A894EBC25B321370062E337 /* permute.swift */; };
+		9A8ADB6F25FCB5770071CF59 /* sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8ADB6E25FCB5770071CF59 /* sort.swift */; };
 		9A8DA83525BC44DF00362DB8 /* reverse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8DA83425BC44DF00362DB8 /* reverse.swift */; };
 		9A8DA83725BC494A00362DB8 /* canAttendMeetings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8DA83625BC494A00362DB8 /* canAttendMeetings.swift */; };
 		9A8DA83925BC6FE700362DB8 /* maxArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8DA83825BC6FE700362DB8 /* maxArea.swift */; };
@@ -125,6 +126,7 @@
 		9A88EB6B25AF4085001DF195 /* lowestCommonAncestor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lowestCommonAncestor.swift; sourceTree = "<group>"; };
 		9A894EBA25B2DC7F0062E337 /* letterCombinations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = letterCombinations.swift; sourceTree = "<group>"; };
 		9A894EBC25B321370062E337 /* permute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = permute.swift; sourceTree = "<group>"; };
+		9A8ADB6E25FCB5770071CF59 /* sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sort.swift; sourceTree = "<group>"; };
 		9A8DA83425BC44DF00362DB8 /* reverse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reverse.swift; sourceTree = "<group>"; };
 		9A8DA83625BC494A00362DB8 /* canAttendMeetings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = canAttendMeetings.swift; sourceTree = "<group>"; };
 		9A8DA83825BC6FE700362DB8 /* maxArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maxArea.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 		9A69FCA8253A9F3400B285A6 /* 排序 */ = {
 			isa = PBXGroup;
 			children = (
+				9A8ADB6E25FCB5770071CF59 /* sort.swift */,
 			);
 			path = "排序";
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				9A69FCCC253B1BE600B285A6 /* merge.swift in Sources */,
 				9A69FCDA253B1D8400B285A6 /* getIntersectionNode.swift in Sources */,
 				9A840B9C25C5A71000670396 /* maxSubArray.swift in Sources */,
+				9A8ADB6F25FCB5770071CF59 /* sort.swift in Sources */,
 				9A82E58A25BBF26800406603 /* LRUCache.swift in Sources */,
 				9A69FCD6253B1D0B00B285A6 /* removeElements.swift in Sources */,
 				9A62267225BB16A00032FEFF /* moveZeroes.swift in Sources */,

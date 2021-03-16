@@ -33,7 +33,7 @@ class Solution {
     
 }
 
-print("Hello, World!")
+//print("Hello, World!")
 
 
 twosum()
@@ -51,3 +51,8 @@ maxValue()
 threeSum()
 
 longestCommonSubsequence()
+
+//bubble()
+//selection()
+//insertSort()
+//testQuickSort()
